@@ -1,0 +1,17 @@
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Gradle working directory
+.gradle/
+
+# Build directories for Gradle and IDEs
+build/
+dist/
+bin/
+.settings/
+.classpath
+.project
+.idea/

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_report_image"
+            android:id="@+id/qrCode" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_centerHorizontal="true" android:contentDescription="@string/qrcode"
+            android:visibility="gone"/>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" android:id="@+id/codeLayout">
+
+    </android.support.constraint.ConstraintLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/qrCode" android:id="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="15dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp" android:layout_height="wrap_content" android:layout_below="@+id/codeLayout"
+            android:layout_alignParentStart="true" android:layout_alignParentEnd="true">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/code_text" android:layout_weight="1"
+                android:gravity="center"/>
+        <Button
+                android:text="@string/btn_rescan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/btn_scan" android:layout_weight="1"
+                android:textAllCaps="false" android:textSize="12sp"/>
+    </LinearLayout>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/title_card"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="15dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            android:hint="@string/input_name_card" android:textSize="13sp" android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true" android:layout_below="@+id/linearLayout"
+            tools:targetApi="o" android:autofillHints=""/>
+    <Button
+            android:text="@string/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btn_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:textAllCaps="false"
+            android:layout_alignParentBottom="true" android:layout_marginBottom="15dp"
+            android:layout_centerHorizontal="true"/>
+</RelativeLayout>
